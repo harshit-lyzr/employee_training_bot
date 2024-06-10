@@ -1,7 +1,13 @@
+import os
+
 import streamlit as st
 import requests
 import json
 from PIL import Image
+from dotenv import load_dotenv
+
+load_dotenv()
+token = os.getenv("JWT_TOKEN")
 
 
 st.set_page_config(
@@ -43,7 +49,7 @@ def get_chatbot_response(message):
     ])
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 3ewtowetkgsdgpsdgsdgoetewtm'
+        'Authorization': F'Bearer {token}'
     }
 
     params = {"input_message": message}
