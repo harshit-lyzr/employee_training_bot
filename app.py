@@ -5,7 +5,7 @@ from PIL import Image
 
 
 st.set_page_config(
-    page_title="Lyzr Test Case Generator",
+    page_title="Lyzr Employee Training Chatbot",
     layout="centered",  # or "wide"
     initial_sidebar_state="auto",
     page_icon="lyzr-logo-cut.png",
